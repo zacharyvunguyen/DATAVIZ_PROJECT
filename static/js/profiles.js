@@ -51,7 +51,7 @@ function init_filter(){
             .append("option")
             .text(sample)
             .property("value", sample);
-        })})
+        })});
         
   d3.json("/2018metadata/Years_on_List").then((filtername) => {
       filtername.sort(function(a, b){return b-a});    
@@ -61,7 +61,7 @@ function init_filter(){
               .append("option")
               .text(sample)
               .property("value", sample);
-          })})
+          })});
   
  // Show first info
  BuildProfileInfo(1);

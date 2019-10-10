@@ -90,7 +90,7 @@ lbd = {
         image_src = $sidebar.data('image');
 
         if(image_src !== undefined){
-            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
+            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>';
             $sidebar.append(sidebar_container);
         }
     },
@@ -132,7 +132,7 @@ lbd = {
             }
         }
     },200)
-}
+};
 
 
 // Returns a function, that, as long as it continues to be invoked, will not
@@ -151,4 +151,4 @@ function debounce(func, wait, immediate) {
 		}, wait);
 		if (immediate && !timeout) func.apply(context, args);
 	};
-};
+}

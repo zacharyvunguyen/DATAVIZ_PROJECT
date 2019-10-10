@@ -39,4 +39,4 @@ d3.json(url, function(data) {
       weight: 1,
       fillOpacity: 0.8
     }
-  }).addTo(myMap)})
+  }).addTo(myMap)});

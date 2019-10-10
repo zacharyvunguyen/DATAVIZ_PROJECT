@@ -51,8 +51,7 @@ function display_table(url){
               .text(function (d) { return d.value; });
 
   });
-};
-
+}
 function update_table(url){
 
   d3.json(url).then((data) => {
@@ -79,10 +78,7 @@ function update_table(url){
               .text(function (d) { return d.value; });
 
   });
-};
-
-
-
+}
 display_table(url_1);
 
 var pre_page = d3.select("#pre_page");
@@ -263,7 +259,7 @@ function init_filter(){
             .append("option")
             .text(sample)
             .property("value", sample);
-        })})
+        })});
         
   d3.json("/2018metadata/Years_on_List").then((filtername) => {
       filtername.sort(function(a, b){return b-a});    
@@ -292,7 +288,7 @@ function optionChanged_years(year) {
   year_filter_baseurl = `/years_on/${year}/`;
   year_filter_baseurl_1 = `/years_on/${year}/1`;
 
-  var year_url = year_filter_baseurl + page_count.toString()
+  var year_url = year_filter_baseurl + page_count.toString();
   update_table(year_url);
 }
 
@@ -307,7 +303,7 @@ function optionChanged_founded(founded){
   founded_filter_baseurl = `/founded_year/${founded}/`;
   founded_filter_baseurl_1 = `/founded_year/${founded}/1`;
 
-  var founded_url = founded_filter_baseurl + page_count.toString()
+  var founded_url = founded_filter_baseurl + page_count.toString();
   update_table(founded_url);
 
 }
@@ -324,7 +320,7 @@ function optionChanged_state(state_l){
   statel_filter_baseurl = `/state_l/${state_l}/`;
   statel_filter_baseurl_1 = `/state_l/${state_l}/1`;
 
-  var statel_url = statel_filter_baseurl + page_count.toString()
+  var statel_url = statel_filter_baseurl + page_count.toString();
   update_table(statel_url);
 
 }
@@ -340,7 +336,7 @@ function optionChanged_city(city){
   city_filter_baseurl = `/city/${city}/`;
   city_filter_baseurl_1 = `/city/${city}/1`;
 
-  var city_url = city_filter_baseurl + page_count.toString()
+  var city_url = city_filter_baseurl + page_count.toString();
   update_table(city_url);
 }
 
@@ -356,7 +352,7 @@ function optionChanged_industry(industry){
   industry_filter_baseurl = `/industry/${industry}/`;
   industry_filter_baseurl_1 = `/industry/${industry}/1`;
 
-  var industry_url = industry_filter_baseurl + page_count.toString()
+  var industry_url = industry_filter_baseurl + page_count.toString();
   update_table(industry_url);
 
 

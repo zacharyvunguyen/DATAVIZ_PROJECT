@@ -83,8 +83,7 @@ function display_table(url){
               .text(function (d) { return d.value; });
 
   });
-};
-
+}
 function update_table(url){
 
   d3.json(url).then((data) => {
@@ -111,10 +110,7 @@ function update_table(url){
               .text(function (d) { return d.value; });
 
   });
-};
-
-
-
+}
 display_table(url_1);
 
 var pre_page = d3.select("#pre_page");
@@ -146,7 +142,7 @@ function buildDonutChart(plot_url,title,plotId,plot_size){
   
   d3.json(plot_url).then(data =>{
     var label_list = data[0];
-    var value_list = data[1]
+    var value_list = data[1];
     
     var data = [{
       values: value_list,

@@ -49,7 +49,7 @@ function init_filter(){
             .append("option")
             .text(sample)
             .property("value", sample);
-        })})
+        })});
         
   d3.json("/2018metadata/Years_on_List").then((filtername) => {
       filtername.sort(function(a, b){return b-a});    
@@ -59,7 +59,7 @@ function init_filter(){
               .append("option")
               .text(sample)
               .property("value", sample);
-          })})
+          })});
 //show first page  
 var industry_url_0 = "/growth_rev_state";
 d3.json(industry_url_0).then(function(info) {
